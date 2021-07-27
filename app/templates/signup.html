@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Signup</h2>
+  {% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="signup" method="post" id="myform">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input class="form-control" type="text" name="username" id="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control" type="password" name="password">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input class="form-control" type="text" name="email" id="email">
+    </div>
+    <div class="form-group">
+     <textarea name="bio" class="form-control" id="bio" >Enter text here...</textarea>
+    </div>
+    <button class="btn btn-default" type="submit">Sign up</button>
+  </form>
+
+<!-- <script type="text/javascript"-->
+<!--                src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!--    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>-->
+
+<!--    <script type="text/javascript">-->
+<!--        $(document).ready(function() {-->
+
+<!--         var socket = io.connect('http://' + document.domain + ':' + location.port);-->
+
+<!--            $("#myform").submit(function(event) {-->
+<!--                socket.emit('view', {'username': $('#username').val(), 'email': $('#email').val(), 'bio': $('#bio').val()});-->
+<!--                $('#name').val('');-->
+<!--                return false;-->
+<!--            });-->
+
+<!--        });-->
+<!--    </script>-->
+{% endblock %}

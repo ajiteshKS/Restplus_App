@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/upload-file" method="POST" enctype="multipart/form-data">
+
+    <label>Select File</label>
+    <input type="file" class="custom-file-input" accept=".xls, .xlsx, .csv, .zip" name="upld_file">
+    <br>
+    <button type="submit" class="btn btn-primary"> Upload File</button>
+    {% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+
+</form>
+
+{% endblock %}
+
